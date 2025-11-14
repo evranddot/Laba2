@@ -21,7 +21,7 @@ using namespace chrono;
 void shakerSort(int* arr) {
         int left = 0, right = arrLength - 1;
         while (left <= right) {
-            // Ïğîõîä ñëåâà íàïğàâî
+            // ĞŸÑ€Ğ¾Ñ…Ğ¾Ğ´ ÑĞ»ĞµĞ²Ğ° Ğ½Ğ°Ğ¿Ñ€Ğ°Ğ²Ğ¾
             for (int i = left; i < right; ++i) {
                 if (arr[i] > arr[i + 1]) {
                     swap(arr[i], arr[i + 1]);
@@ -29,7 +29,7 @@ void shakerSort(int* arr) {
             }
             --right;
 
-            // Ïğîõîä ñïğàâà íàëåâî
+            // ĞŸÑ€Ğ¾Ñ…Ğ¾Ğ´ ÑĞ¿Ñ€Ğ°Ğ²Ğ° Ğ½Ğ°Ğ»ĞµĞ²Ğ¾
             for (int i = right; i > left; --i) {
                 if (arr[i] < arr[i - 1]) { 
                     swap(arr[i], arr[i - 1]); 
@@ -44,7 +44,7 @@ void insertionSort(int* arr) {
     for (int i = 1; i < arrLength; ++i) {
         int key = arr[i];
         int j = i - 1;
-        // Ñäâèãàåì ıëåìåíòû, ïîêà íå íàéäåì ïîçèöèş äëÿ key
+        // Ğ¡Ğ´Ğ²Ğ¸Ğ³Ğ°ĞµĞ¼ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ñ‹, Ğ¿Ğ¾ĞºĞ° Ğ½Ğµ Ğ½Ğ°Ğ¹Ğ´ĞµĞ¼ Ğ¿Ğ¾Ğ·Ğ¸Ñ†Ğ¸Ñ Ğ´Ğ»Ñ key
         while (j >= 0 && arr[j] > key) {
             arr[j + 1] = arr[j];
             --j;
@@ -58,11 +58,11 @@ void gnomeSort(int* arr) {
     int i = 0;
     while (i < arrLength) {
         if (i == 0 || arr[i - 1] <= arr[i]) {
-            ++i;  // Äâèæåíèå âïåğåä
+            ++i;  // Ğ”Ğ²Ğ¸Ğ¶ĞµĞ½Ğ¸Ğµ Ğ²Ğ¿ĞµÑ€ĞµĞ´
         }
         else {
             swap(arr[i], arr[i - 1]);
-            --i;  // Äâèæåíèå íàçàä
+            --i;  // Ğ”Ğ²Ğ¸Ğ¶ĞµĞ½Ğ¸Ğµ Ğ½Ğ°Ğ·Ğ°Ğ´
         }
     }
 }
@@ -107,7 +107,7 @@ void writeArr(int* arr) {
  }
 
 void printArr(int* arr) {
-     cout << "\nÌàññèâ âûãëÿäèò òàê:\n";
+     cout << "\nĞœĞ°ÑÑĞ¸Ğ² Ğ²Ñ‹Ğ³Ğ»ÑĞ´Ğ¸Ñ‚ Ñ‚Ğ°Ğº:\n";
      for (int i = 0; i < arrLength; i++) {
          cout << arr[i] << ' ';
      }
@@ -126,26 +126,26 @@ int main() {
 
     do {
 
-        cout << "Ââåäèòå íîìåğ çàäàíèÿ îò 1 äî 8, ëèáî 9 äëÿ ÈÄÇ, ëèáî 0 äëÿ çàâåğøåíèÿ ïğîãğàììû\n";
+        cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ½Ğ¾Ğ¼ĞµÑ€ Ğ·Ğ°Ğ´Ğ°Ğ½Ğ¸Ñ Ğ¾Ñ‚ 1 Ğ´Ğ¾ 8, Ğ»Ğ¸Ğ±Ğ¾ 9 Ğ´Ğ»Ñ Ğ˜Ğ”Ğ—, Ğ»Ğ¸Ğ±Ğ¾ 0 Ğ´Ğ»Ñ Ğ·Ğ°Ğ²ĞµÑ€ÑˆĞµĞ½Ğ¸Ñ Ğ¿Ñ€Ğ¾Ğ³Ñ€Ğ°Ğ¼Ğ¼Ñ‹\n";
         cin >> menuNumber;
 
         if (menuNumber == 1) {
 
             int sortNumber;
-            cout << "Âûáåğèòå êàê ââîäèòü ìàññèâ: 1 - âğó÷íóş, 2 - ğàíäîìíûé ìàññèâ\n";
+            cout << "Ğ’Ñ‹Ğ±ĞµÑ€Ğ¸Ñ‚Ğµ ĞºĞ°Ğº Ğ²Ğ²Ğ¾Ğ´Ğ¸Ñ‚ÑŒ Ğ¼Ğ°ÑÑĞ¸Ğ²: 1 - Ğ²Ñ€ÑƒÑ‡Ğ½ÑƒÑ, 2 - Ñ€Ğ°Ğ½Ğ´Ğ¾Ğ¼Ğ½Ñ‹Ğ¹ Ğ¼Ğ°ÑÑĞ¸Ğ²\n";
             cin >> sortNumber;
 
             if (sortNumber == 1) {
-                cout << "Çíà÷åíèÿ ïğèíèìàşòñÿ îò -99 äî 99\n";
+                cout << "Ğ—Ğ½Ğ°Ñ‡ĞµĞ½Ğ¸Ñ Ğ¿Ñ€Ğ¸Ğ½Ğ¸Ğ¼Ğ°ÑÑ‚ÑÑ Ğ¾Ñ‚ -99 Ğ´Ğ¾ 99\n";
                 for (int i = 0; i < arrLength; ++i) {
                     cin >> arr[i];
                     cin.sync();
                     if (arr[i] > 99 || arr[i] < -99) {
-                        cout << "Çíà÷åíèå íå âõîäèò â äèàïàçîí!\n";
+                        cout << "Ğ—Ğ½Ğ°Ñ‡ĞµĞ½Ğ¸Ğµ Ğ½Ğµ Ğ²Ñ…Ğ¾Ğ´Ğ¸Ñ‚ Ğ² Ğ´Ğ¸Ğ°Ğ¿Ğ°Ğ·Ğ¾Ğ½!\n";
                         break;
                     }
                 }
-                cout << "\nÌàññèâ âûãëÿäèò òàê: ";
+                cout << "\nĞœĞ°ÑÑĞ¸Ğ² Ğ²Ñ‹Ğ³Ğ»ÑĞ´Ğ¸Ñ‚ Ñ‚Ğ°Ğº: ";
                 for (int i = 0; i < arrLength; ++i) {
                     cout << arr[i] << ' ';
                 }
@@ -188,33 +188,33 @@ int main() {
             bubbleSort(bubbleArr);
             auto end1 = high_resolution_clock::now();
             auto duration1 = duration_cast<nanoseconds>(end1 - start1).count();
-            cout << "Ñîğòèğîâêà bubbleSort çàâåğøèëàñü çà " << duration1 << " íàíîñåêóíä.\n";
+            cout << "Ğ¡Ğ¾Ñ€Ñ‚Ğ¸Ñ€Ğ¾Ğ²ĞºĞ° bubbleSort Ğ·Ğ°Ğ²ĞµÑ€ÑˆĞ¸Ğ»Ğ°ÑÑŒ Ğ·Ğ° " << duration1 << " Ğ½Ğ°Ğ½Ğ¾ÑĞµĞºÑƒĞ½Ğ´.\n";
 
             auto start2 = high_resolution_clock::now();
             shakerSort(shakerArr);
             auto end2 = high_resolution_clock::now();
             auto duration2 = duration_cast<nanoseconds>(end2 - start2).count();
-            cout << "Ñîğòèğîâêà shakerSort çàâåğøèëàñü çà " << duration2 << " íàíîñåêóíä.\n";
+            cout << "Ğ¡Ğ¾Ñ€Ñ‚Ğ¸Ñ€Ğ¾Ğ²ĞºĞ° shakerSort Ğ·Ğ°Ğ²ĞµÑ€ÑˆĞ¸Ğ»Ğ°ÑÑŒ Ğ·Ğ° " << duration2 << " Ğ½Ğ°Ğ½Ğ¾ÑĞµĞºÑƒĞ½Ğ´.\n";
 
             auto start3 = high_resolution_clock::now();
             insertionSort(insertionArr);
             auto end3 = high_resolution_clock::now();
             auto duration3 = duration_cast<nanoseconds>(end3 - start3).count();
-            cout << "Ñîğòèğîâêà insertionSort çàâåğøèëàñü çà " << duration3 << " íàíîñåêóíä.\n";
+            cout << "Ğ¡Ğ¾Ñ€Ñ‚Ğ¸Ñ€Ğ¾Ğ²ĞºĞ° insertionSort Ğ·Ğ°Ğ²ĞµÑ€ÑˆĞ¸Ğ»Ğ°ÑÑŒ Ğ·Ğ° " << duration3 << " Ğ½Ğ°Ğ½Ğ¾ÑĞµĞºÑƒĞ½Ğ´.\n";
 
             auto start4 = high_resolution_clock::now();
             gnomeSort(gnomeArr);
             auto end4 = high_resolution_clock::now();
             auto duration4 = duration_cast<nanoseconds>(end4 - start4).count();
-            cout << "Ñîğòèğîâêà gnomeSort çàâåğøèëàñü çà " << duration4 << " íàíîñåêóíä.\n";
+            cout << "Ğ¡Ğ¾Ñ€Ñ‚Ğ¸Ñ€Ğ¾Ğ²ĞºĞ° gnomeSort Ğ·Ğ°Ğ²ĞµÑ€ÑˆĞ¸Ğ»Ğ°ÑÑŒ Ğ·Ğ° " << duration4 << " Ğ½Ğ°Ğ½Ğ¾ÑĞµĞºÑƒĞ½Ğ´.\n";
 
             auto start5 = high_resolution_clock::now();
             shellSort(shellArr);
             auto end5 = high_resolution_clock::now();
             auto duration5 = duration_cast<nanoseconds>(end5 - start5).count();
-            cout << "Ñîğòèğîâêà shellSort çàâåğøèëàñü çà " << duration5 << " íàíîñåêóíä.\n";
+            cout << "Ğ¡Ğ¾Ñ€Ñ‚Ğ¸Ñ€Ğ¾Ğ²ĞºĞ° shellSort Ğ·Ğ°Ğ²ĞµÑ€ÑˆĞ¸Ğ»Ğ°ÑÑŒ Ğ·Ğ° " << duration5 << " Ğ½Ğ°Ğ½Ğ¾ÑĞµĞºÑƒĞ½Ğ´.\n";
 
-            cout << "Îòñîğòèğîâàííûé ìàññèâ âûãëÿäèò òàê:";
+            cout << "ĞÑ‚ÑĞ¾Ñ€Ñ‚Ğ¸Ñ€Ğ¾Ğ²Ğ°Ğ½Ğ½Ñ‹Ğ¹ Ğ¼Ğ°ÑÑĞ¸Ğ² Ğ²Ñ‹Ğ³Ğ»ÑĞ´Ğ¸Ñ‚ Ñ‚Ğ°Ğº:";
             for (int i = 0; i < arrLength; ++i) {
                 cout << gnomeArr[i] << ' ';
             }
@@ -236,28 +236,28 @@ int main() {
                     minNumber = randomArr[i];
                 }
             }
-            cout << "Íåîòñîğòèğîâàííûé ìàññèâ: " << "Ìèíèìàëüíûé ıëåìåíò: " << minNumber << '\n' << "Ìàêñèìàëüíûé ıëåìåíò: " << maxNumber << '\n';
+            cout << "ĞĞµĞ¾Ñ‚ÑĞ¾Ñ€Ñ‚Ğ¸Ñ€Ğ¾Ğ²Ğ°Ğ½Ğ½Ñ‹Ğ¹ Ğ¼Ğ°ÑÑĞ¸Ğ²: " << "ĞœĞ¸Ğ½Ğ¸Ğ¼Ğ°Ğ»ÑŒĞ½Ñ‹Ğ¹ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚: " << minNumber << '\n' << "ĞœĞ°ĞºÑĞ¸Ğ¼Ğ°Ğ»ÑŒĞ½Ñ‹Ğ¹ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚: " << maxNumber << '\n';
 
             auto end6 = high_resolution_clock::now();
             auto duration6 = duration_cast<nanoseconds>(end6 - start6).count();
 
-            cout << "Íà ïîèñê ìàêñèìàëüíîãî è ìèíèìàëüíîãî ıëåìåíòîâ â íåîòñîğòèğîâàííîì ìàññèâå óøëî " << duration6 << " íàíîñåêóíä.\n";
+            cout << "ĞĞ° Ğ¿Ğ¾Ğ¸ÑĞº Ğ¼Ğ°ĞºÑĞ¸Ğ¼Ğ°Ğ»ÑŒĞ½Ğ¾Ğ³Ğ¾ Ğ¸ Ğ¼Ğ¸Ğ½Ğ¸Ğ¼Ğ°Ğ»ÑŒĞ½Ğ¾Ğ³Ğ¾ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ğ¾Ğ² Ğ² Ğ½ĞµĞ¾Ñ‚ÑĞ¾Ñ€Ñ‚Ğ¸Ñ€Ğ¾Ğ²Ğ°Ğ½Ğ½Ğ¾Ğ¼ Ğ¼Ğ°ÑÑĞ¸Ğ²Ğµ ÑƒÑˆĞ»Ğ¾ " << duration6 << " Ğ½Ğ°Ğ½Ğ¾ÑĞµĞºÑƒĞ½Ğ´.\n";
 
             auto start8 = high_resolution_clock::now();
 
-            cout << "Ñîğòèğîâàííûé ìàññèâ: " << "Ìèíèìàëüíûé ıëåìåíò:" << gnomeArr[0] << '\n' << "Ìàêñèìàëüíûé ıëåìåíò: " << gnomeArr[arrLength - 1] << '\n';
+            cout << "Ğ¡Ğ¾Ñ€Ñ‚Ğ¸Ñ€Ğ¾Ğ²Ğ°Ğ½Ğ½Ñ‹Ğ¹ Ğ¼Ğ°ÑÑĞ¸Ğ²: " << "ĞœĞ¸Ğ½Ğ¸Ğ¼Ğ°Ğ»ÑŒĞ½Ñ‹Ğ¹ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚:" << gnomeArr[0] << '\n' << "ĞœĞ°ĞºÑĞ¸Ğ¼Ğ°Ğ»ÑŒĞ½Ñ‹Ğ¹ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚: " << gnomeArr[arrLength - 1] << '\n';
 
             auto end8 = high_resolution_clock::now();
             auto duration8 = duration_cast<nanoseconds>(end8 - start8).count();
 
-            cout << "Íà ïîèñê ìàêñèìàëüíîãî è ìèíèìàëüíîãî ıëåìåíòîâ â îòñîğòèğîâàííîì ìàññèâå óøëî " << duration8 << " íàíîñåêóíä.\n\n";
+            cout << "ĞĞ° Ğ¿Ğ¾Ğ¸ÑĞº Ğ¼Ğ°ĞºÑĞ¸Ğ¼Ğ°Ğ»ÑŒĞ½Ğ¾Ğ³Ğ¾ Ğ¸ Ğ¼Ğ¸Ğ½Ğ¸Ğ¼Ğ°Ğ»ÑŒĞ½Ğ¾Ğ³Ğ¾ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ğ¾Ğ² Ğ² Ğ¾Ñ‚ÑĞ¾Ñ€Ñ‚Ğ¸Ñ€Ğ¾Ğ²Ğ°Ğ½Ğ½Ğ¾Ğ¼ Ğ¼Ğ°ÑÑĞ¸Ğ²Ğµ ÑƒÑˆĞ»Ğ¾ " << duration8 << " Ğ½Ğ°Ğ½Ğ¾ÑĞµĞºÑƒĞ½Ğ´.\n\n";
 
         }
 
         if (menuNumber == 4) {
 
-            // ÑÎĞÒÈĞÎÂÀÍÍÛÉ ÌÀÑÑÈÂ
-            cout << "Ñîğòèğîâàííûé ìàññèâ: \n";
+            // Ğ¡ĞĞ Ğ¢Ğ˜Ğ ĞĞ’ĞĞĞĞ«Ğ™ ĞœĞĞ¡Ğ¡Ğ˜Ğ’
+            cout << "Ğ¡Ğ¾Ñ€Ñ‚Ğ¸Ñ€Ğ¾Ğ²Ğ°Ğ½Ğ½Ñ‹Ğ¹ Ğ¼Ğ°ÑÑĞ¸Ğ²: \n";
             auto start10 = high_resolution_clock::now();
             int minNumber = gnomeArr[0], maxNumber = gnomeArr[arrLength - 1];
             int k = 0;
@@ -276,9 +276,9 @@ int main() {
                 midNumber *= -1;
             }
             
-            cout << "Ñğåäíåå çíà÷åíèå ìàññèâà = " << midNumber << '\n';
+            cout << "Ğ¡Ñ€ĞµĞ´Ğ½ĞµĞµ Ğ·Ğ½Ğ°Ñ‡ĞµĞ½Ğ¸Ğµ Ğ¼Ğ°ÑÑĞ¸Ğ²Ğ° = " << midNumber << '\n';
 
-            cout << "Çíà÷åíèÿ èíäåêñîâ, ÷èñëà êîòîğûõ ñîâïàäàşò ñî ñğåäíèì çíà÷åíèåì ìàññèâà: ";
+            cout << "Ğ—Ğ½Ğ°Ñ‡ĞµĞ½Ğ¸Ñ Ğ¸Ğ½Ğ´ĞµĞºÑĞ¾Ğ², Ñ‡Ğ¸ÑĞ»Ğ° ĞºĞ¾Ñ‚Ğ¾Ñ€Ñ‹Ñ… ÑĞ¾Ğ²Ğ¿Ğ°Ğ´Ğ°ÑÑ‚ ÑĞ¾ ÑÑ€ĞµĞ´Ğ½Ğ¸Ğ¼ Ğ·Ğ½Ğ°Ñ‡ĞµĞ½Ğ¸ĞµĞ¼ Ğ¼Ğ°ÑÑĞ¸Ğ²Ğ°: ";
             for (int i = 0; i < arrLength; ++i) {
                 if (gnomeArr[i] == midNumber) {
                     k += 1;
@@ -286,14 +286,14 @@ int main() {
 
                 }
             }
-            cout <<"\nÊîëè÷åñòâî ÷èñåë, ñîâïàäàşùèõ ñî ñğåäíèì çíà÷åíèåì = " << k << '\n';
+            cout <<"\nĞšĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ²Ğ¾ Ñ‡Ğ¸ÑĞµĞ», ÑĞ¾Ğ²Ğ¿Ğ°Ğ´Ğ°ÑÑ‰Ğ¸Ñ… ÑĞ¾ ÑÑ€ĞµĞ´Ğ½Ğ¸Ğ¼ Ğ·Ğ½Ğ°Ñ‡ĞµĞ½Ğ¸ĞµĞ¼ = " << k << '\n';
             auto end10 = high_resolution_clock::now();
             auto duration10 = duration_cast<nanoseconds>(end10 - start10).count();
-            cout << "Îïåğàöèÿ â îòñîğòèğîâàííîì ìàññèâå çàâåğøèëàñü çà " << duration10 << " íàíîñåêóíä.\n\n";
+            cout << "ĞĞ¿ĞµÑ€Ğ°Ñ†Ğ¸Ñ Ğ² Ğ¾Ñ‚ÑĞ¾Ñ€Ñ‚Ğ¸Ñ€Ğ¾Ğ²Ğ°Ğ½Ğ½Ğ¾Ğ¼ Ğ¼Ğ°ÑÑĞ¸Ğ²Ğµ Ğ·Ğ°Ğ²ĞµÑ€ÑˆĞ¸Ğ»Ğ°ÑÑŒ Ğ·Ğ° " << duration10 << " Ğ½Ğ°Ğ½Ğ¾ÑĞµĞºÑƒĞ½Ğ´.\n\n";
 
-            // ÍÅÑÎĞÒÈĞÎÂÀÍÍÛÉ ÌÀÑÑÈÂ
+            // ĞĞ•Ğ¡ĞĞ Ğ¢Ğ˜Ğ ĞĞ’ĞĞĞĞ«Ğ™ ĞœĞĞ¡Ğ¡Ğ˜Ğ’
 
-            cout << "Íåñîğòèğîâàííûé ìàññèâ: \n";
+            cout << "ĞĞµÑĞ¾Ñ€Ñ‚Ğ¸Ñ€Ğ¾Ğ²Ğ°Ğ½Ğ½Ñ‹Ğ¹ Ğ¼Ğ°ÑÑĞ¸Ğ²: \n";
 
             auto start11 = high_resolution_clock::now();
 
@@ -327,9 +327,9 @@ int main() {
                 midNumber1 *= -1;
             }
 
-            cout << "Ñğåäíåå çíà÷åíèå ìàññèâà = " << midNumber1 << '\n';
+            cout << "Ğ¡Ñ€ĞµĞ´Ğ½ĞµĞµ Ğ·Ğ½Ğ°Ñ‡ĞµĞ½Ğ¸Ğµ Ğ¼Ğ°ÑÑĞ¸Ğ²Ğ° = " << midNumber1 << '\n';
 
-            cout << "Çíà÷åíèÿ èíäåêñîâ, ÷èñëà êîòîğûõ ñîâïàäàşò ñî ñğåäíèì çíà÷åíèåì ìàññèâà: ";
+            cout << "Ğ—Ğ½Ğ°Ñ‡ĞµĞ½Ğ¸Ñ Ğ¸Ğ½Ğ´ĞµĞºÑĞ¾Ğ², Ñ‡Ğ¸ÑĞ»Ğ° ĞºĞ¾Ñ‚Ğ¾Ñ€Ñ‹Ñ… ÑĞ¾Ğ²Ğ¿Ğ°Ğ´Ğ°ÑÑ‚ ÑĞ¾ ÑÑ€ĞµĞ´Ğ½Ğ¸Ğ¼ Ğ·Ğ½Ğ°Ñ‡ĞµĞ½Ğ¸ĞµĞ¼ Ğ¼Ğ°ÑÑĞ¸Ğ²Ğ°: ";
             for (int i = 0; i < arrLength; ++i) {
                 if (randomArr[i] == midNumber1) {
                     k1 += 1;
@@ -337,11 +337,11 @@ int main() {
 
                 }
             }
-            cout << "\nÊîëè÷åñòâî ÷èñåë, ñîâïàäàşùèõ ñî ñğåäíèì çíà÷åíèåì = " << k1 << '\n';
+            cout << "\nĞšĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ²Ğ¾ Ñ‡Ğ¸ÑĞµĞ», ÑĞ¾Ğ²Ğ¿Ğ°Ğ´Ğ°ÑÑ‰Ğ¸Ñ… ÑĞ¾ ÑÑ€ĞµĞ´Ğ½Ğ¸Ğ¼ Ğ·Ğ½Ğ°Ñ‡ĞµĞ½Ğ¸ĞµĞ¼ = " << k1 << '\n';
 
             auto end11 = high_resolution_clock::now();
             auto duration11 = duration_cast<nanoseconds>(end11 - start11).count();
-            cout << "Îïåğàöèÿ â íåîòñîğòèğîâàííîì ìàññèâå çàâåğøèëàñü çà " << duration11 << " íàíîñåêóíä.\n\n";
+            cout << "ĞĞ¿ĞµÑ€Ğ°Ñ†Ğ¸Ñ Ğ² Ğ½ĞµĞ¾Ñ‚ÑĞ¾Ñ€Ñ‚Ğ¸Ñ€Ğ¾Ğ²Ğ°Ğ½Ğ½Ğ¾Ğ¼ Ğ¼Ğ°ÑÑĞ¸Ğ²Ğµ Ğ·Ğ°Ğ²ĞµÑ€ÑˆĞ¸Ğ»Ğ°ÑÑŒ Ğ·Ğ° " << duration11 << " Ğ½Ğ°Ğ½Ğ¾ÑĞµĞºÑƒĞ½Ğ´.\n\n";
 
         }
 
@@ -349,7 +349,7 @@ int main() {
 
             float number5;
 
-            cout << "Ââåäèòå ÷èñëî, ñ êîòîğûì õîòèòå ñğàâíèòü ìàññèâ ";
+            cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾, Ñ ĞºĞ¾Ñ‚Ğ¾Ñ€Ñ‹Ğ¼ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ ÑÑ€Ğ°Ğ²Ğ½Ğ¸Ñ‚ÑŒ Ğ¼Ğ°ÑÑĞ¸Ğ² ";
 
             cin >> number5;
 
@@ -361,7 +361,7 @@ int main() {
                 }
             }
 
-            cout << "Â ìàññèâå " <<  k << " ìåíüøå ÷èñëà " << number5 << "\n\n";
+            cout << "Ğ’ Ğ¼Ğ°ÑÑĞ¸Ğ²Ğµ " <<  k << " Ğ¼ĞµĞ½ÑŒÑˆĞµ Ñ‡Ğ¸ÑĞ»Ğ° " << number5 << "\n\n";
 
         }
 
@@ -369,7 +369,7 @@ int main() {
 
             float number6;
 
-            cout << "Ââåäèòå ÷èñëî, ñ êîòîğûì õîòèòå ñğàâíèòü ìàññèâ ";
+            cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾, Ñ ĞºĞ¾Ñ‚Ğ¾Ñ€Ñ‹Ğ¼ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ ÑÑ€Ğ°Ğ²Ğ½Ğ¸Ñ‚ÑŒ Ğ¼Ğ°ÑÑĞ¸Ğ² ";
 
             cin >> number6;
 
@@ -381,36 +381,36 @@ int main() {
                 }
             }
 
-            cout << "Â ìàññèâå " << k << " áîëüøå ÷èñëà " << number6 << "\n\n";
+            cout << "Ğ’ Ğ¼Ğ°ÑÑĞ¸Ğ²Ğµ " << k << " Ğ±Ğ¾Ğ»ÑŒÑˆĞµ Ñ‡Ğ¸ÑĞ»Ğ° " << number6 << "\n\n";
         }
 
         if (menuNumber == 7) {
 
             int wantedNumber, k = 0;
 
-            cout << "Ââåäèòå ÷èñëî, êîòîğîå õîòèòå íàéòè ";
+            cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾, ĞºĞ¾Ñ‚Ğ¾Ñ€Ğ¾Ğµ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ Ğ½Ğ°Ğ¹Ñ‚Ğ¸ ";
 
             cin >> wantedNumber;
 
             auto start7 = high_resolution_clock::now();
             for (int i = 0; i < arrLength; ++i) {
                 if (randomArr[i] == wantedNumber) {
-                    cout << "Òàêîå ÷èñëî â ìàññèâå åñòü\n";
+                    cout << "Ğ¢Ğ°ĞºĞ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾ Ğ² Ğ¼Ğ°ÑÑĞ¸Ğ²Ğµ ĞµÑÑ‚ÑŒ\n";
                     k += 1;
                     break;
                 }
             }
             if (k == 0) {
-                cout << "Òàêîãî ÷èñëà â ìàññèâå íåò\n";
+                cout << "Ğ¢Ğ°ĞºĞ¾Ğ³Ğ¾ Ñ‡Ğ¸ÑĞ»Ğ° Ğ² Ğ¼Ğ°ÑÑĞ¸Ğ²Ğµ Ğ½ĞµÑ‚\n";
             }
 
             auto end7 = high_resolution_clock::now();
             auto duration7 = duration_cast<nanoseconds>(end7 - start7).count();
-            cout << "Ïîèñê ÷èñëà ïåğåáîğîì çàêîí÷èëîñü çà " << duration7 << " íàíîñåêóíä.\n";
+            cout << "ĞŸĞ¾Ğ¸ÑĞº Ñ‡Ğ¸ÑĞ»Ğ° Ğ¿ĞµÑ€ĞµĞ±Ğ¾Ñ€Ğ¾Ğ¼ Ğ·Ğ°ĞºĞ¾Ğ½Ñ‡Ğ¸Ğ»Ğ¾ÑÑŒ Ğ·Ğ° " << duration7 << " Ğ½Ğ°Ğ½Ğ¾ÑĞµĞºÑƒĞ½Ğ´.\n";
 
 
             int number71;
-            cout << "Áèíàğíûé ïîèñê, ââåäèòå ÷èñëî, êîòğîå õîòèòå íàéòè ";
+            cout << "Ğ‘Ğ¸Ğ½Ğ°Ñ€Ğ½Ñ‹Ğ¹ Ğ¿Ğ¾Ğ¸ÑĞº, Ğ²Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾, ĞºĞ¾Ñ‚Ñ€Ğ¾Ğµ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ Ğ½Ğ°Ğ¹Ñ‚Ğ¸ ";
             cin >> number71;
 
             auto start71 = high_resolution_clock::now();
@@ -422,18 +422,18 @@ int main() {
             int resualtOfSearch = binarySearch(gnomeArr, number71, 0, arrLength - 1);
 
             if (resualtOfSearch == -1) {
-                cout << "Òàêîãî ıëåìåíòà â ìàññèâå íåò\n";
+                cout << "Ğ¢Ğ°ĞºĞ¾Ğ³Ğ¾ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ğ° Ğ² Ğ¼Ğ°ÑÑĞ¸Ğ²Ğµ Ğ½ĞµÑ‚\n";
             }
             else {
-                cout << "İëåìåíò â ìàññèâå ïğèñóòñòâóåò\n";
+                cout << "Ğ­Ğ»ĞµĞ¼ĞµĞ½Ñ‚ Ğ² Ğ¼Ğ°ÑÑĞ¸Ğ²Ğµ Ğ¿Ñ€Ğ¸ÑÑƒÑ‚ÑÑ‚Ğ²ÑƒĞµÑ‚\n";
             }
-            cout << "Ïîèñê ÷èñëà ñ ïîìîùüş áèíàğíîãî ïîèñêà çàêîí÷èëîñü çà " << duration71 << " íàíîñåêóíä.\n\n";
+            cout << "ĞŸĞ¾Ğ¸ÑĞº Ñ‡Ğ¸ÑĞ»Ğ° Ñ Ğ¿Ğ¾Ğ¼Ğ¾Ñ‰ÑŒÑ Ğ±Ğ¸Ğ½Ğ°Ñ€Ğ½Ğ¾Ğ³Ğ¾ Ğ¿Ğ¾Ğ¸ÑĞºĞ° Ğ·Ğ°ĞºĞ¾Ğ½Ñ‡Ğ¸Ğ»Ğ¾ÑÑŒ Ğ·Ğ° " << duration71 << " Ğ½Ğ°Ğ½Ğ¾ÑĞµĞºÑƒĞ½Ğ´.\n\n";
         }
 
         if (menuNumber == 8) {
             int firstNumber, secondNumber, firstNumber1, secondNumber1;
 
-            cout << "Ââåäèòå èíäåêñû ÷èñåë, êîòîğûå õîòèòå ïîìåíÿòü ìåñòàìè\n";
+            cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ¸Ğ½Ğ´ĞµĞºÑÑ‹ Ñ‡Ğ¸ÑĞµĞ», ĞºĞ¾Ñ‚Ğ¾Ñ€Ñ‹Ğµ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ Ğ¿Ğ¾Ğ¼ĞµĞ½ÑÑ‚ÑŒ Ğ¼ĞµÑÑ‚Ğ°Ğ¼Ğ¸\n";
             for (int i = 0; i < arrLength; ++i)
             {
                 swapArr[i] = gnomeArr[i];
@@ -452,20 +452,20 @@ int main() {
 
             }
             else {
-                cout << "Îäèí èç èíäåêñîâ íå ñóùåñòâóåò, ïîïğîáóéòå åùå ğàç, ïîêà ÷òî ";
+                cout << "ĞĞ´Ğ¸Ğ½ Ğ¸Ğ· Ğ¸Ğ½Ğ´ĞµĞºÑĞ¾Ğ² Ğ½Ğµ ÑÑƒÑ‰ĞµÑÑ‚Ğ²ÑƒĞµÑ‚, Ğ¿Ğ¾Ğ¿Ñ€Ğ¾Ğ±ÑƒĞ¹Ñ‚Ğµ ĞµÑ‰Ğµ Ñ€Ğ°Ğ·, Ğ¿Ğ¾ĞºĞ° Ñ‡Ñ‚Ğ¾ ";
             }
 
             auto end9 = high_resolution_clock::now();
             auto duration9 = duration_cast<nanoseconds>(end9 - start9).count();
 
-            cout << "Ìàññèâ âûãëÿäèò òàê: ";
+            cout << "ĞœĞ°ÑÑĞ¸Ğ² Ğ²Ñ‹Ğ³Ğ»ÑĞ´Ğ¸Ñ‚ Ñ‚Ğ°Ğº: ";
             for (int i = 0; i < arrLength; ++i) {
                 cout << swapArr[i] << ' ';
             }
             cout << '\n';
 
 
-            cout << "Ïåğåñòàíîâêà ÷èñåë çàíÿëà " << duration9 << " íàíîñåêóíä.\n\n";
+            cout << "ĞŸĞµÑ€ĞµÑÑ‚Ğ°Ğ½Ğ¾Ğ²ĞºĞ° Ñ‡Ğ¸ÑĞµĞ» Ğ·Ğ°Ğ½ÑĞ»Ğ° " << duration9 << " Ğ½Ğ°Ğ½Ğ¾ÑĞµĞºÑƒĞ½Ğ´.\n\n";
         }
 
         if (menuNumber == 9) {
@@ -473,7 +473,7 @@ int main() {
 
             /* int n;
             *
-            cout << "Ââåäèòå n ";
+            cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ n ";
 
             cin >> n;
 
@@ -496,16 +496,16 @@ int main() {
                 }
             }
             if (k == 199) {
-                cout << "Äà\n\n";
+                cout << "Ğ”Ğ°\n\n";
             }
             else {
-                cout << "Íåò\n\n";
+                cout << "ĞĞµÑ‚\n\n";
             }
         }
 
 
         if (menuNumber > 9 || menuNumber < 0) {
-            cout << "Òàêîãî ÷èñëà â ïåğå÷íå íåò, ïîïğîáóéòå åùå ğàç\n";
+            cout << "Ğ¢Ğ°ĞºĞ¾Ğ³Ğ¾ Ñ‡Ğ¸ÑĞ»Ğ° Ğ² Ğ¿ĞµÑ€ĞµÑ‡Ğ½Ğµ Ğ½ĞµÑ‚, Ğ¿Ğ¾Ğ¿Ñ€Ğ¾Ğ±ÑƒĞ¹Ñ‚Ğµ ĞµÑ‰Ğµ Ñ€Ğ°Ğ·\n";
         }
 
     }
