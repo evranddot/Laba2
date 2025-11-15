@@ -4,7 +4,7 @@
 using namespace std;
 using namespace chrono;
 
- const int arrLength = 10;
+ const int arrLength = 100;
  const int maxOfArr = 99;
  const int minOfArr = -99;
 
