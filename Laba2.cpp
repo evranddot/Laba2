@@ -491,7 +491,7 @@ int main() {
             }*/
 
             for (int i = -99; i < 100; ++i) {
-                if (gnomeArr[i - 1] == i) {
+                if (gnomeArr[i + 99] == i) {
                     k += 1;
                 }
             }
