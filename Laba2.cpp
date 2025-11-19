@@ -4,7 +4,7 @@
 using namespace std;
 using namespace chrono;
 
- const int arrLength = 10000;
+ const int arrLength = 100;
  const int maxOfArr = 99;
  const int minOfArr = -99;
 
@@ -351,14 +351,11 @@ int main() {
             cout << "Введите число, с которым хотите сравнить массив ";
 
             cin >> number5;
-            auto start1 = high_resolution_clock::now();
+            
             int k = 0;
             for (int i = 0; gnomeArr[i] < number5; ++i) {
                 k += 1;
             }
-            auto end1 = high_resolution_clock::now();
-            auto duration1 = duration_cast<nanoseconds>(end1 - start1).count();
-            cout << "Сортировка bubbleSort завершилась за " << duration1 << " наносекунд.\n";
 
             cout << "В массиве " << k << " чисел меньше числа " << number5 << "\n\n";
 
